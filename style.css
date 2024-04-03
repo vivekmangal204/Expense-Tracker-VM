@@ -1,0 +1,146 @@
+/* Root Section Used to Store Variables in CSS */
+:root {
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+    --primary-color: #6950e4;
+    --secondary-color: #f39c12;
+    --tertiary-color: #2ecc71;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin: 10px 0;
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.inc-exp-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.money-plus {
+    color: var(--tertiary-color);
+}
+
+.money-minus {
+    color: #c0392b;
+}
+
+label {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5636b8;
+}
+
+.list li {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    color: var(--primary-color);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.list li:hover {
+    transform: translateY(-5px);
+}
+
+.list li.plus {
+    border-right: 5px solid var(--tertiary-color);
+}
+
+.list li.minus {
+    border-right: 5px solid #c0392b;
+}
+
+.delete-btn,
+.edit-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn,
+.list li:hover .edit-btn {
+    opacity: 1;
+}
+
+.delete-btn {
+    right: 10px;
+    color: #c0392b;
+}
+
+.edit-btn {
+    right: 50px;
+    color: var(--secondary-color);
+}
